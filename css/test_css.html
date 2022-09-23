@@ -54,6 +54,23 @@
     </map>
 </p>
 
+<div class="outer"><div class="inner"></div><div class="inner"></div><div class="inner"></div></div>
+
+<style>
+    /*.inner {    width:33.33%;    height:300px;    display:inline-block;    outline:solid 1px blue;}*/
+    /*inner {    width:33.33%;    height:300px;    display:inline-block;    outline:solid 1px blue;    font-size:30px;}.outer {    font-size:0;}*/
+    /*.inner {    width:33.33%;    height:300px;    display:inline-block;    outline:solid 1px blue;}.outer {    width:101px}*/
+    .outer {    width:101px}.inner {    width:33.33%;    height:300px;    display:inline-block;    outline:solid 1px blue;}.inner:last-child {    margin-right:-5px;}
+</style>
+
+<div class="outer">    <div class="fixed"></div>    <div class="auto"></div></div>
+
+<style>
+    /*.fixed {    width:200px;}.fixed, .auto {    height:300px;    outline:solid 1px blue;}*/
+    /*.fixed {    display:inlin-block;    vertical-align:top;}.auto {    margin-left:-200px;    width:100%;    display:inline-block;    vertical-align:top;}*/
+    fixed {    display:inline-block;    vertical-align:top;}.auto {    margin-left:-200px;    padding-left:200px;    box-sizing:border-box;    width:100%;    display:inline-block;    vertical-align:top;}
+</style>
+
 </body>
 </html>
 
