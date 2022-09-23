@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p>This is a somewhat long HTMLparagraph that will be broken into severallines. The first line will be identifiedby a fictional tag sequence. The other lineswill be treated as ordinary lines in theparagraph.</p>
+
+<style>
+    /*p::first-line {*/
+    /*    text-transform: uppercase*/
+    /*}*/
+
+    p::first-letter {     text-transform: uppercase;    font-size:2em;    float:left; }
+</style>
+
+<!--<div>  <p id=a>First paragraph</p>  <p>Second paragraph</p></div>-->
+
+<div>  <span id=a>First paragraph</span><br/>  <span>Second paragraph</span></div>
+
+<style>
+    /*div>p#a {    color:green;}div::first-line {     color:blue; }*/
+    div>span#a {    color:green;}div::first-letter {     color:blue; }
+</style>
+
+
+<!--<p class="special">I'm real element</p>-->
+
+<!--<style>-->
+<!--    .special::before {    display: block;    content: "pseudo! ";}-->
+<!--</style>-->
+
+<p class="special">I'm real element</p>
+
+<style>
+    p.special::before {    display: block;    content: counter(chapno, upper-roman) ". ";}
+</style>
+
+
+</body>
+</html>
+
