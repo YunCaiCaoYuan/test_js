@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<!--<img src='data:image/svg+xml;charset=utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)"/></svg>'/>-->
+
+
+
+<!--<img src='data:image/svg+xml;charset=utf8,<svg width="600" height="400" version="1.1"-->
+<!--xmlns="http://www.w3.org/2000/svg"><ellipse cx="300" cy="150" rx="200" ry="80"-->
+<!--style="fill:rgb(200,100,50);-->
+<!--stroke:rgb(0,0,100);stroke-width:2"/></svg>' width="100"/>-->
+
+
+<!--<iframe sandbox srcdoc="<p>Yeah, you can see it <a href="/gallery?mode=cover&amp;amp;page=1">in my gallery</a>."></iframe>-->
+
+<script>
+    // console.log( Math.abs(0.1 + 0.2 - 0.3) <= Number.EPSILON);
+
+
+    // var symbolObject = (function(){ return this; }).call(Symbol("a"));
+    // console.log(typeof symbolObject); //object
+    // console.log(symbolObject instanceof Symbol); //true
+    // console.log(symbolObject.constructor == Symbol); //true
+
+
+    // var symbolObject = Object(Symbol("a"));
+    // console.log(typeof symbolObject); //object
+    // console.log(symbolObject instanceof Symbol); //true
+    // console.log(symbolObject.constructor == Symbol); //true
+
+
+    // var symbolObject = Object(Symbol("a"));
+    // console.log(Object.prototype.toString.call(symbolObject)); //[object Symbol]
+
+
+    // var o = {
+    //     valueOf : () => {console.log("valueOf"); return {}},
+    //     toString : () => {console.log("toString"); return {}}
+    // }
+    // o * 2
+    // valueOf
+    // toString
+    // TypeError
+
+
+    // var o = {
+    //     valueOf : () => {console.log("valueOf"); return {}},
+    //     toString : () => {console.log("toString"); return {}}
+    // }
+    // String(o)
+    // toString
+    // valueOf
+    // TypeError
+
+
+    // var o = {
+    //     valueOf : () => {console.log("valueOf"); return {}},
+    //     toString : () => {console.log("toString"); return {}}
+    // }
+    // o[Symbol.toPrimitive] = () => {console.log("toPrimitive"); return "hello"}
+    // console.log(o + "")
+    // toPrimitive
+    // hello
+
+    var myParse = function (val) {
+        // var num = val.match(/\.[0-9]+|(?:[1-9]+[0-9]*|0)(?:\.[0-9]*|\.)?)(?:[eE][+-]{0,1}[0-9]+)?(?![_$a-zA-Z0-9])/);
+        if (val) {
+            var num = val.match(/\.[0-9]+|(?:[1-9]+[0-9]*|0)(?:\.[0-9]*|\.)?(?:[eE][+-]{0,1}[0-9]+)?(?![_$a-zA-Z0-9])/);
+            if (num !== null) {
+                return num[0] - 0;
+            }else{
+                return NaN;
+            }
+        }else{
+            return NaN;
+        }
+    }
+    console.log(myParse('+123'))
+
+</script>
+
+</body>
+</html>
